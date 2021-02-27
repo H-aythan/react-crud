@@ -23,8 +23,6 @@ const ReactCrud = () => {
             ?setForm({...form,[e.target.name]:e.target.value,id:user.length})
             :setForm({...form,[e.target.name]:e.target.value,id:editId});
     }
-    
-    
     const enviarDatos=(e)=>{
         e.preventDefault();
         
@@ -38,7 +36,6 @@ const ReactCrud = () => {
             
         }else {
             
-            console.log("si")
             setUser([...user,form,]);
             setForm(initialForm)
         }
@@ -57,10 +54,8 @@ const ReactCrud = () => {
     }
     
     const editUser=(user)=>{
-        console.log(user);
         setEditId(user.id);
         setForm(user);
-        
     }
     return (
         <div className="h-screen overflow-hidden">
